@@ -1,0 +1,26 @@
+import SwiftUI
+
+struct StartPage: View 
+{
+    var body: some View 
+    {
+        VStack 
+        {
+            Text("Polish Log").foregroundColor(.black).font(.largeTitle).position(x: 270, y: 200)
+            
+            Button(action: {
+                print("Tapped!")
+            }) {
+                Text("Your Logs")
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(40)
+                    .foregroundColor(.black)
+                    .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color.pink, lineWidth: 5))
+                    .position(x: 270, y: 15)
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(LinearGradient(gradient: Gradient(colors: [.white, .pink]), startPoint: .center, endPoint: .bottom))
+    }
+}
