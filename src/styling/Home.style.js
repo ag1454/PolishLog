@@ -5,8 +5,10 @@ export default StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         verticalAlign: "middle",
-        fontSize: 30,
+        fontSize: 50,
         color: "black",
+        marginBottom: 100,
+        fontFamily: 'Cochin',
       },
 
     container: {
@@ -15,4 +17,14 @@ export default StyleSheet.create({
       justifyContent: 'center',
       backgroundColor: 'white',
     },
+
+    buttonText: {
+      fontFamily: 'Cochin',
+      fontSize: 20,
+    },
+
+    button: {
+      padding: 10,
+      borderRadius: 30,
+    }
 });

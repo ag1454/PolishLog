@@ -9,8 +9,13 @@ function Home() {
     <SafeAreaView style={styles.container}>
         <Text style={styles.text}>Polish Log</Text>
 
-        <Button mode="contained" onPress={() => console.log('Pressed')}>
-            Press me
+        <Button
+            mode="contained"
+            buttonColor="#FF92F4"
+            style={styles.button}
+            labelStyle={styles.buttonText}
+            onPress={() => console.log('Pressed')}>
+            Your Logs
         </Button>
     </SafeAreaView>
     );
