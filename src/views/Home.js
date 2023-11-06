@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
 import styles from '../styling/Home.style.js';
 import SafeAreaView from 'react-native-safe-area-view';
 import { Button } from 'react-native-paper';
 
-function Home() {
+function Home({ navigation }) {
     return (
     <SafeAreaView style={styles.container}>
         <Text style={styles.text}>Polish Log</Text>
@@ -14,7 +14,7 @@ function Home() {
             buttonColor="#FF92F4"
             style={styles.button}
             labelStyle={styles.buttonText}
-            onPress={() => console.log('Pressed')}>
+            onPress={() => navigation.navigate('Your Logs')}>
             Your Logs
         </Button>
     </SafeAreaView>
