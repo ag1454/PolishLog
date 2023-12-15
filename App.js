@@ -13,7 +13,12 @@ export default function App(navigation, route) {
             <Stack.Navigator>
                 <Stack.Screen name="Home Screen" component={Home} options={{headerShown: false}}/>
 
-                <Stack.Screen name="Your Logs" component={YourLogs} options={{headerShown: false}}/>
+                <Stack.Screen name="Your Logs" component={YourLogs} options={{
+                    headerTitle: () => <Text style={{color: "#FFFFFF", fontWeight: "bold", fontSize: 25, fontFamily: 'Cochin'}}>My Logs</Text>,
+                    headerBackTitle: "",
+                    headerStyle: {backgroundColor: "#FF92F4"},
+                    headerTintColor: "#FFFFFF",
+                }}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
