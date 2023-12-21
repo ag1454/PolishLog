@@ -8,5 +8,4 @@ ag1454
 
 **Built With**
 
-React Native
-Firebase
+React Native and Firebase
