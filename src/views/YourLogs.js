@@ -2,8 +2,7 @@ import React from 'react';
 import { View, ScrollView, Text } from 'react-native';
 import styles from '../styling/YourLogs.style.js';
 import SafeAreaView from 'react-native-safe-area-view';
-import { Searchbar, Button } from 'react-native-paper';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Searchbar, Button, Avatar } from 'react-native-paper';
 // icons: https://icons.expo.fyi/
 
 function YourLogs() {
@@ -29,11 +28,37 @@ function YourLogs() {
                     </Button>
                 </View>
             </View>
-
-            <ScrollView style={{height: "80%"}}>
-                <Text>Log 1</Text>
-            </ScrollView>
         </View>
+
+        <ScrollView style={{height: "80%"}}>
+            <View style={styles.logBox}>
+                <Avatar.Image size={100} source={require('../../assets/grey.jpg')}/>
+
+                <View style={styles.logBoxText}>
+                    <Text style={{fontFamily: 'Cochin', fontSize: 30}}>[LOG NAME]</Text>
+                    <Text style={{fontFamily: 'Cochin', fontSize: 20, marginTop: 5}}>Brands:</Text>
+                    <Text style={{fontFamily: 'Cochin', fontSize: 20, marginTop: 5}}>Colors:</Text>
+                </View>
+            </View>
+            <View style={styles.logBox}>
+                <Avatar.Image size={100} source={require('../../assets/grey.jpg')}/>
+
+                <View style={styles.logBoxText}>
+                    <Text style={{fontFamily: 'Cochin', fontSize: 30}}>[LOG NAME]</Text>
+                    <Text style={{fontFamily: 'Cochin', fontSize: 20, marginTop: 5}}>Brands:</Text>
+                    <Text style={{fontFamily: 'Cochin', fontSize: 20, marginTop: 5}}>Colors:</Text>
+                </View>
+            </View>
+        </ScrollView>
+        <Button
+                mode="contained"
+                contentStyle={{flexDirection: 'row-reverse'}}
+                onPress={() => console.log('Pressed')}
+                style={styles.addLogButton}
+                textColor="#FFFFFF"
+                labelStyle={styles.buttonText}>
+                Add Log
+            </Button>
     </SafeAreaView>
     );
 }

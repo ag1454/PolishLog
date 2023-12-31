@@ -30,5 +30,34 @@ export default StyleSheet.create({
         margin: 5,
         borderRadius: 45,
         height: 55,
-    }
+    },
+
+    addLogButton:
+    {
+        marginTop: 20,
+        backgroundColor: "#FF92F4",
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 10,
+        borderRadius: 30,
+        width: 150,
+    },
+
+    buttonText:
+    {
+        fontFamily: 'Cochin',
+        fontSize: 20,
+    },
+
+    logBox:
+    {
+        marginTop: 20,
+        flexDirection: "row",
+    },
+
+    logBoxText:
+    {
+        alignItems: 'left',
+        marginLeft: 20,
+    },
 });
