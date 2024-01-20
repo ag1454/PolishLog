@@ -5,7 +5,7 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { Searchbar, Button, Avatar } from 'react-native-paper';
 // icons: https://icons.expo.fyi/
 
-function YourLogs() {
+function YourLogs({ navigation }) {
     return (
     <SafeAreaView style={styles.container}>
         <View>
@@ -53,7 +53,7 @@ function YourLogs() {
         <Button
                 mode="contained"
                 contentStyle={{flexDirection: 'row-reverse'}}
-                onPress={() => console.log('Pressed')}
+                onPress={() => navigation.navigate('Add Log')}
                 style={styles.addLogButton}
                 textColor="#FFFFFF"
                 labelStyle={styles.buttonText}>
