@@ -2,9 +2,8 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import styles from '../styling/AddLog.style.js';
 import SafeAreaView from 'react-native-safe-area-view';
-import { TextInput } from 'react-native-paper';
+import { TextInput, Button } from 'react-native-paper';
 import UploadImage from '../components/UploadImage.js';
-// image uploader: https://www.waldo.com/blog/add-an-image-picker-react-native-app
 
 function YourLogs() {
     return (
@@ -27,6 +26,27 @@ function YourLogs() {
             <Text style={styles.text}>Log Photo:</Text>
         </View>
         <UploadImage/>
+        <View style={styles.buttonView}>
+            <Button
+                mode="contained"
+                contentStyle={{flexDirection: 'row-reverse'}}
+                onPress={() => navigation.navigate('Add Log')}
+                style={styles.cancelButton}
+                textColor="#FFFFFF"
+                labelStyle={styles.buttonText}>
+                Cancel
+            </Button>
+
+            <Button
+                mode="contained"
+                contentStyle={{flexDirection: 'row-reverse'}}
+                onPress={() => navigation.navigate('Add Log')}
+                style={styles.createButton}
+                textColor="#FFFFFF"
+                labelStyle={styles.buttonText}>
+                Create
+            </Button>
+        </View>
     </SafeAreaView>
     );
 }

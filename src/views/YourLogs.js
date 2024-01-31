@@ -51,14 +51,14 @@ function YourLogs({ navigation }) {
             </View>
         </ScrollView>
         <Button
-                mode="contained"
-                contentStyle={{flexDirection: 'row-reverse'}}
-                onPress={() => navigation.navigate('Add Log')}
-                style={styles.addLogButton}
-                textColor="#FFFFFF"
-                labelStyle={styles.buttonText}>
-                Add Log
-            </Button>
+            mode="contained"
+            contentStyle={{flexDirection: 'row-reverse'}}
+            onPress={() => navigation.navigate('Add Log')}
+            style={styles.addLogButton}
+            textColor="#FFFFFF"
+            labelStyle={styles.buttonText}>
+            Add Log
+        </Button>
     </SafeAreaView>
     );
 }
